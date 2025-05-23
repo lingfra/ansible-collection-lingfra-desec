@@ -1,0 +1,18 @@
+---
+# tasks file for lingfra.desec.dns
+
+- name: Create, modify or delete RRsets on deSEC
+  ansible.builtin.uri:
+    url: https://desec.io/api/v1/domains/{{ domain.name }}/rrsets/
+    method: PUT
+    unredirected_headers:
+      - Authorization
+    headers:
+      Authorization: Token {{ dns_desec_authorization_token }}
+    body: "{{ domain.rrset_list }}"
+    body_format: json
+    status_code: 200
+  loop: "{{ dns_domain_list | lingfra.desec.parse_dns_domain_list }}"
+  loop_control:
+    loop_var: domain
+    label: "{{ domain.name }}"

@@ -1,0 +1,11 @@
+---
+- name: "Configure deSEC DNS entries over API"
+  hosts: "{{ target | default('localhost') }}"
+  become: false
+  gather_facts: false
+  tags:
+    - desec
+  tasks:
+    - name: "Import role lingfra.desec.dns"
+      ansible.builtin.import_role:
+        name: lingfra.desec.dns
