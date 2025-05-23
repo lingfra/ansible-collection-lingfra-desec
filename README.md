@@ -6,13 +6,41 @@ An Ansible collection to manage DNS entries at [deSEC](https://desec.io).
 
 ### Roles
 
+- [dns](./roles/dns/README.md): Configures DNS entries for deSEC.
+
 ### Playbooks
+
+- [dns](./playbooks/dns.yaml)
 
 ## Installation
 
-The collection can be obtained from the Git repository. This may be desirable to
-get the latest development version. The following `requirements.yaml` entry, can
-be used to download directly from Git:
+This collection is published to [Ansible Galaxy](https://galaxy.ansible.com). It
+can be installed using the Ansible Galaxy CLI:
+
+```bash
+ansible-galaxy collection install lingfra.desec
+```
+
+It is also possible to specify this collection in the `requirements.yaml` (or
+`requirements.yml`) file:
+
+```yaml
+---
+collections:
+  - name: lingfra.desec
+    version: "v0.1.0"   # optionally specify version
+```
+
+And use the Ansible Galaxy CLI to install the definitions from the requirements
+file:
+
+```bash
+ansible-galaxy install -r requirements.yaml
+```
+
+Alternatively, the collection can be obtained from the Git repository. This may
+be desirable to get the latest development version. The following
+`requirements.yaml` entry, can be used to download directly from Git:
 
 ```yaml
 ---
