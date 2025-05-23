@@ -1,0 +1,17 @@
+---
+namespace: lingfra
+name: desec
+version: "0.3.0"
+readme: README.md
+authors:
+  - lingling <lingling+dev@posteo.de>
+description: Configure DNS entries for deSEC
+license_file: "LICENSE"
+repository: https://codeberg.org/lingfra/ansible-collection-lingfra-desec
+documentation: https://codeberg.org/lingfra/ansible-collection-lingfra-desec
+issues: https://codeberg.org/lingfra/ansible-collection-lingfra-desec/issues
+tags:
+  - desec
+  - dns
+  - infrastructure
+dependencies: {}
