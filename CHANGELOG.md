@@ -12,5 +12,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 First release implementing basic `lingfra.desec.dns` role to configure DNS
 entries for [deSEC](https://desec.io).
 
-[Unreleased]: https://codeberg.org/lingfra/ansible-collection-lingfra-desec/compare/v0.1.0..HEAD
-[0.1.0]: https://codeberg.org/lingfra/ansible-collection-lingfra-desec/releases/tag/v0.1.0
+[Unreleased]: https://github.com/lingfra/ansible-collection-lingfra-desec/compare/v0.1.0..HEAD
+[0.1.0]: https://github.com/lingfra/ansible-collection-lingfra-desec/releases/tag/v0.1.0

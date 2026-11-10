@@ -141,5 +141,5 @@ None.
 This role is part of the Ansible collection [lingfra.desec][collection_url].
 For more information, see the collections [README](../../README.md) file.
 
-[collection_url]: https://codeberg.org/lingfra/ansible-collection-lingfra-desec
+[collection_url]: https://github.com/lingfra/ansible-collection-lingfra-desec
 <!-- END_ANSIBLE_DOCS -->
