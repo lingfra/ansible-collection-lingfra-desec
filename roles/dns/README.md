@@ -22,78 +22,39 @@ Authorization token for deSEC API. Can be obtained at [desec.io/tokens](https://
 
 #### `dns_domain_list`
 
-Type: `list of dicts of 'dns_domain_list' options`, Default: `[]`.
+Type: list of dicts of `dns_domain_list` [options](#options-for-main--dns_domain_list), Default: `[]`.
 
 List of domains to be managed on your deSEC account. One list item reflects one domain in the account.
 
-**Options:**
+### Options for `main` > `dns_domain_list`
 
 - **`name`** (Type: `str`, **required**).
 
   The domain itself, e. g. `example.com`.
 
-- `rrset_list` (Type: `list of dicts of 'rrset_list' options`, Default: `[]`).
+- `rrset_list` (Type: list of dicts of `rrset_list` [options](#options-for-main--dns_domain_list--rrset_list), Default: `[]`).
 
   The Resource Record Sets to add / remove / modify. Refer to the [RRset Field Reference](https://desec.readthedocs.io/en/latest/dns/rrsets.html#rrset-field-reference) in the deSEC DNS API documentation.
 
-  **Options:**
+### Options for `main` > `dns_domain_list` > `rrset_list`
 
-  - `records` (Type: `list of 'str'`, optional).
+- `records` (Type: list of `str`, optional).
 
-    Record content strings. Omit this variable or set it to `[]` to delete a record set.
+  Record content strings. Omit this variable or set it to `[]` to delete a record set.
 
-  - **`subname`** (Type: `str`, **required**).
+- **`subname`** (Type: `str`, **required**).
 
-    Subdomain string.
+  Subdomain string.
 
-  - `ttl` (Type: `int`, Default: `3600`).
+- `ttl` (Type: `int`, Default: `3600`).
 
-    The time-to-live value for this record set.
+  The time-to-live value for this record set.
 
-  - **`type`** (Type: `str`, **required**).
+- **`type`** (Type: `str`, **required**).
 
-    The type of the record set.
+  The type of the record set.
 
-    **Choices:**
-
-    - `A`
-    - `AAAA`
-    - `AFSDB`
-    - `APL`
-    - `CAA`
-    - `CDNSKEY`
-    - `CDS`
-    - `CERT`
-    - `CNAME`
-    - `DHCID`
-    - `DLV`
-    - `DNAME`
-    - `DNSKEY`
-    - `DS`
-    - `EUI48`
-    - `EUI64`
-    - `HINFO`
-    - `HTTPS`
-    - `KX`
-    - `L32`
-    - `L64`
-    - `LOC`
-    - `LP`
-    - `MX`
-    - `NAPTR`
-    - `NID`
-    - `NS`
-    - `OPENPGPKEY`
-    - `PTR`
-    - `RP`
-    - `SMIMEA`
-    - `SPF`
-    - `SRV`
-    - `SSHFP`
-    - `SVCB`
-    - `TLSA`
-    - `TXT`
-    - `URI`
+  _Choices:_ `A`, `AAAA`, `AFSDB`, `APL`, `CAA`, `CDNSKEY`, `CDS`, `CERT`, `CNAME`, `DHCID`, `DLV`, `DNAME`, `DNSKEY`, `DS`, `EUI48`, `EUI64`, `HINFO`, `HTTPS`, `KX`, `L32`, `L64`, `LOC`, `LP`, `MX`, `NAPTR`, `NID`, `NS`, `OPENPGPKEY`, `PTR`, `RP`, `SMIMEA`, `SPF`, `SRV`, `SSHFP`, `SVCB`, `TLSA`, `TXT`, `URI`
 
 ### Examples for `main`
 
