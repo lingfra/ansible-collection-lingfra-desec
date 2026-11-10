@@ -8,7 +8,7 @@ argument_specs:
       - "This role implements the deSEC API fields as a YAML structure."
       - "This allows to define the configuration for deSEC in your Ansible inventory alongside your other host configurations."
     author:
-      - "lingling"
+      - "Stella Kemmerling"
     options:
       dns_desec_authorization_token:
         type: "str"
